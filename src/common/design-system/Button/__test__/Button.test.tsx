@@ -16,4 +16,10 @@ describe('Button component', () => {
         await userEvent.click(buttonElement);
         expect(handleClick).toHaveBeenCalledTimes(1);
     });
+    it('should render a disabled button', () => {
+        render(<Button disabled={true} onClick={() => { } }>Click me</Button>) 
+        const buttonElement = screen.getByRole('button');
+        expect(buttonElement).toBeDisabled()
+    });
+
 });

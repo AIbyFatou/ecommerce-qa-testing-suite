@@ -37,6 +37,27 @@ describe("Reducer tests", () => {
         //THEN
         expect(result.cartCount).toEqual(mockUpdatedCart.cartCount);
         expect(result.cartProducts).toEqual(mockUpdatedCart.cartProducts);
-        });
-});
+    });
 
+    it('should update the product when it is removed from the cart', () => {
+        //GIVEN
+        const initialState = {
+            ...mockState,
+            cartCount: 3,
+            cartProducts: mockUpdatedCart.cartProducts,
+        };
+        const action = {
+            type : "cart/removed",
+            payload: {
+                cartCount: 2,
+                cartProducts: mockUpdatedCart.cartProducts.slice(0, 2),
+            },
+        } as ActionData;
+
+        const result = reducer(initialState, action);
+
+        //THEN
+        expect(result.cartCount).toEqual(2);
+        expect(result.cartProducts).toEqual(mockUpdatedCart.cartProducts.slice(0, 2));
+    });
+});

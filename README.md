@@ -1,5 +1,8 @@
 # 🧪 E-Commerce QA Testing Suite
 
+[![CI](https://github.com/AIbyFatou/ecommerce-qa-testing-suite/actions/workflows/ci.yml/badge.svg)](https://github.com/AIbyFatou/ecommerce-qa-testing-suite/actions/workflows/ci.yml)
+[![CI](https://github.com/AIbyFatou/ecommerce-qa-testing-suite/actions/workflows/ci.yml/badge.svg)](https://github.com/AIbyFatou/ecommerce-qa-testing-suite/actions/workflows/ci.yml)
+[![CI](https://github.com/AIbyFatou/ecommerce-qa-testing-suite/actions/workflows/ci.yml/badge.svg)](https://github.com/AIbyFatou/ecommerce-qa-testing-suite/actions/workflows/ci.yml)
 ![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
 ![Vitest](https://img.shields.io/badge/vitest-4.1.0-yellow)
 ![React](https://img.shields.io/badge/react-18.2.0-blue)

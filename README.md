@@ -5,113 +5,71 @@
 ![React](https://img.shields.io/badge/react-18.2.0-blue)
 ![TypeScript](https://img.shields.io/badge/typescript-5.2.2-blue)
 
-> A professional QA testing suite built on top of a React e-commerce application.  
-> This project demonstrates my approach to software quality: **unit tests first, clean architecture, and CI/CD automation.**
+> **"The build is easy. Reliability is rare."**
+> A professional-grade QA infrastructure for mission-critical e-commerce platforms.
+> This project focuses on **high-confidence deployments** through automated validation and clean architecture.
 
 ---
 
-## 🏗️ Tech Stack
+## 🏗️ Technical Architecture
 
-| Layer | Technology |
-|-------|-----------|
-| Framework | React 18 + TypeScript 5 |
-| Build tool | Vite 5 |
-| Testing | Vitest + Testing Library |
-| UI | MUI (Material UI) + Tailwind CSS |
-| State | Context API + useReducer |
-| Data fetching | TanStack React Query |
+This suite is built to handle complex state transitions and UI interactions with a **zero-regression** objective.
 
----
-
-## 🚀 Getting Started
-
-### Install dependencies
-```bash
-npm install
-```
-
-### Run the app
-```bash
-npm run dev
-```
-
-### Run the tests
-```bash
-npm test
-```
-
-### Run tests with UI
-```bash
-npm run test:ui
-```
+| Layer | Stack | Purpose |
+|-------|-------|---------|
+| **Core** | React 18 + TS 5 | Type-safe component architecture |
+| **Testing** | Vitest + RTL | High-performance unit & integration testing |
+| **State** | useReducer + Context | Predictable state management validation |
+| **CI/CD** | GitHub Actions | Automated quality gates on every push |
 
 ---
 
-## ✅ Test Coverage
+## ✅ Quality Coverage
 
-### Unit Tests
+### Core Business Logic (Reducers)
+- [x] **State Integrity:** Validate product injection on `products/fetched`
+- [x] **Cart Logic:** Precise tracking of `cartCount` for add/remove operations
+- [x] **Data Persistence:** Mocked API responses to ensure predictable state updates
 
-| Component / Module | Test | Status |
-|-------------------|------|--------|
-| `Button` | Renders with correct text | ✅ |
-| `Button` | Calls onClick handler when clicked | ✅ |
-| `Button` | Is disabled when disabled prop is true | ✅ |
-| `reducer` | Updates products on `products/fetched` | ✅ |
-| `reducer` | Updates cartCount on `cart/added` | ✅ |
-| `reducer` | Updates cartCount on `cart/removed` | ✅ |
-
-### Coming Soon
-
-| Component / Module | Test | Status |
-|-------------------|------|--------|
-| `CartCount` | Displays correct cart count | 🔜 |
-| `ProductItem` | Renders product title and price | 🔜 |
+### UI / Design System
+- [x] **Component Reliability:** Button state validation (loading, disabled, interaction)
+- [x] **Event Handling:** Strict `onClick` handler verification
 
 ---
 
-## 📁 Project Structure
-```
+## 🚀 Engineering Roadmap
+
+Current focus: **Expanding the coverage of the core checkout flow.**
+
+- [ ] **Integration:** `CartCount` real-time sync with global state
+- [ ] **Visual Consistency:** `ProductItem` rendering benchmarks
+- [ ] **E2E:** Implementation of Cypress for critical path validation (Checkout)
+
+---
+
+## 📁 Scalable Structure
+
+The project follows a **Feature-Based Architecture**, making it easy to scale and test in isolation:
+```text
 src/
-├── common/
-│   ├── design-system/
-│   │   └── Button/
-│   │       ├── Button.tsx
-│   │       └── __test__/
-│   │           └── Button.test.tsx ✅
-│   └── layout/
-│       └── Header/
-├── features/
-│   ├── cart/
-│   │   ├── add-cart-product/
-│   │   ├── display-cart-count/
-│   │   ├── list-cart-products/
-│   │   └── remove-cart-product/
-│   ├── common/
-│   │   ├── actions/
-│   │   ├── reducer/ ✅
-│   │   └── state/
-│   └── product/
-│       ├── display-product/
-│       ├── list-products/
-│       └── search-products/
+├── common/             # Shared Design System & Layout
+├── features/           # Domain-driven modules (Cart, Product, etc.)
+│   ├── cart/           # Isolated logic for cart management
+│   └── product/        # Product discovery & search logic
+└── __mocks__/          # Standardized data sets for testing
 ```
 
 ---
 
-## 🔍 QA Philosophy
+## 🔍 Reliability Philosophy
 
-> *"The build is easy. Reliability is rare."*
-
-This project follows these QA principles:
-
-- **Test behavior, not implementation** — using Testing Library's user-centric approach
-- **Unit tests first** — isolate components and pure functions
-- **Conventional commits** — every commit is traceable and meaningful
-- **CI/CD ready** — GitHub Actions runs tests automatically on every push
+- **User-Centric Testing:** We test behaviors (what the user sees), not implementation details
+- **Atomic Validation:** Every pure function and reducer is isolated for 100% predictability
+- **Traceable Progress:** Conventional commits and structured PRs for full auditability
 
 ---
 
-## 👩🏿‍💻 Author
+## 👩🏿‍💻 Contact
 
-**Fatou Cissé** — AI Reliability & QA Engineer  
-[GitHub](https://github.com/AIbyFatou) · [Malt](https://www.malt.fr) · contact@aibyfatou.com
+**Fatou Cissé** — QA Engineer & AI Reliability  
+[GitHub](https://github.com/AIbyFatou) · [Malt](https://www.malt.fr/profile/fatoucisse) · contact@aibyfatou.com

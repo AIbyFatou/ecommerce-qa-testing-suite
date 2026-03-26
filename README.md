@@ -1,9 +1,6 @@
 # 🧪 E-Commerce QA Testing Suite
 
 [![CI](https://github.com/AIbyFatou/ecommerce-qa-testing-suite/actions/workflows/ci.yml/badge.svg)](https://github.com/AIbyFatou/ecommerce-qa-testing-suite/actions/workflows/ci.yml)
-[![CI](https://github.com/AIbyFatou/ecommerce-qa-testing-suite/actions/workflows/ci.yml/badge.svg)](https://github.com/AIbyFatou/ecommerce-qa-testing-suite/actions/workflows/ci.yml)
-[![CI](https://github.com/AIbyFatou/ecommerce-qa-testing-suite/actions/workflows/ci.yml/badge.svg)](https://github.com/AIbyFatou/ecommerce-qa-testing-suite/actions/workflows/ci.yml)
-![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
 ![Vitest](https://img.shields.io/badge/vitest-4.1.0-yellow)
 ![React](https://img.shields.io/badge/react-18.2.0-blue)
 ![TypeScript](https://img.shields.io/badge/typescript-5.2.2-blue)
@@ -58,22 +55,21 @@ npm run test:ui
 |-------------------|------|--------|
 | `Button` | Renders with correct text | ✅ |
 | `Button` | Calls onClick handler when clicked | ✅ |
+| `Button` | Is disabled when disabled prop is true | ✅ |
+| `reducer` | Updates products on `products/fetched` | ✅ |
+| `reducer` | Updates cartCount on `cart/added` | ✅ |
+| `reducer` | Updates cartCount on `cart/removed` | ✅ |
 
 ### Coming Soon
 
 | Component / Module | Test | Status |
 |-------------------|------|--------|
-| `Button` | Is disabled when disabled prop is true | 🔜 |
-| `reducer` | Updates products on `products/fetched` | 🔜 |
-| `reducer` | Updates cartCount on `cart/added` | 🔜 |
-| `reducer` | Updates cartCount on `cart/removed` | 🔜 |
 | `CartCount` | Displays correct cart count | 🔜 |
 | `ProductItem` | Renders product title and price | 🔜 |
 
 ---
 
 ## 📁 Project Structure
-
 ```
 src/
 ├── common/
@@ -92,7 +88,7 @@ src/
 │   │   └── remove-cart-product/
 │   ├── common/
 │   │   ├── actions/
-│   │   ├── reducer/
+│   │   ├── reducer/ ✅
 │   │   └── state/
 │   └── product/
 │       ├── display-product/
@@ -111,7 +107,7 @@ This project follows these QA principles:
 - **Test behavior, not implementation** — using Testing Library's user-centric approach
 - **Unit tests first** — isolate components and pure functions
 - **Conventional commits** — every commit is traceable and meaningful
-- **CI/CD ready** — GitHub Actions will run tests on every push
+- **CI/CD ready** — GitHub Actions runs tests automatically on every push
 
 ---
 

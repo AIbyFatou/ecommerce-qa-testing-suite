@@ -1,9 +1,9 @@
 import type { ReactElement } from "react";
 import { Panorama } from "@mui/icons-material";
-import { ProducItemData } from "../../types";
+import { ProductItemData } from "../../types";
 
 type Props = {
-    product: Omit<ProducItemData, 'id'>;
+    product: Omit<ProductItemData, 'id'>;
 }
 
 const ProductItem = ({product: {picture, name, price},}: Props): ReactElement => {

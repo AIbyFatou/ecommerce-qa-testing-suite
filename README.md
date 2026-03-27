@@ -34,6 +34,8 @@ This suite is built to handle complex state transitions and UI interactions with
 ### UI / Design System
 - [x] **Component Reliability:** Button state validation (loading, disabled, interaction)
 - [x] **Event Handling:** Strict `onClick` handler verification
+- [x] **Visual Rendering:** ProductItem name, price and image display validation
+- [x] **Fallback Handling:** Panorama icon when no picture is provided
 
 ---
 
@@ -41,8 +43,8 @@ This suite is built to handle complex state transitions and UI interactions with
 
 Current focus: **Expanding the coverage of the core checkout flow.**
 
+- [x] **Visual Consistency:** `ProductItem` rendering benchmarks ✅
 - [ ] **Integration:** `CartCount` real-time sync with global state
-- [ ] **Visual Consistency:** `ProductItem` rendering benchmarks
 - [ ] **E2E:** Implementation of Cypress for critical path validation (Checkout)
 
 ---

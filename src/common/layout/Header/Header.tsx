@@ -19,7 +19,7 @@ const Header = (): ReactElement => {
             </div>
 
             {/* Panier à droite */}
-            <Link to="/cart" className="text-white">
+            <Link to="/cart" className="text-white" data-testid="cart-link">
                 <CartCount />
             </Link>
         </header>

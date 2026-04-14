@@ -18,6 +18,7 @@ return(
 
             return (
                 <div key={id}
+                data-testid="cart-item"
                 className="[&:not(:last-child)]:border-b border-gray-300 border-solid pb-4">
                 <CartProductItem 
                     cartProduct={cartProductWithoutId}

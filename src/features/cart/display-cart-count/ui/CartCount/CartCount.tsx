@@ -9,9 +9,15 @@ const CartCount = (): ReactElement => {
     const {cartCount } = UseCartCount();
 
     return (
-        <Badge badgeContent={cartCount} showZero color="error">
+        <span data-testid="cart-count">
+            <Badge 
+        badgeContent={cartCount} 
+        showZero 
+        color="error"
+            >
             <ShoppingCart />
         </Badge>
+        </span>
     )
 }
 
